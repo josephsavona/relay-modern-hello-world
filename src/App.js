@@ -56,8 +56,8 @@ class App extends Component {
 const FeedEntry = createFragmentContainer(
   ({ data }) => (
     <div>
-      <div>{entry.repository.owner.login}/{entry.repository.name}: {entry.repository.stargazers_count} Stars</div>
-      <div>Posted by {entry.postedBy.login}</div>
+      <div>{data.repository.owner.login}/{data.repository.name}: {data.repository.stargazers_count} Stars</div>
+      <div>Posted by {data.postedBy.login}</div>
     </div>
   ),
   graphql`
